@@ -5,14 +5,13 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-/*static char *font = "Iosevka Nerd Font:pixelsize=15:antialias=true:autohint=true";*/
-static char *font = "Tamzen:pixelsize=17:antialias=true:autohint=true";
+static char *font = "Iosevka Nerd Font:pixelsize=15:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
 	"JoyPixels:pixelsite=15:antialias=true:autohint=true",
 };
 
-static int borderpx = 50;
+static int borderpx = 10;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -91,30 +90,29 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-unsigned int alpha = /*0xbb*/0xff;
+unsigned int alpha = 0xbb/*0xff*/;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	/* 8 normal colors */
-	[0] = "#1c1e26", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	[1] = "#e93c58", /* red     */
-	[2] = "#efaf8e", /* green   */
- 	[3] = "#efb993", /* yellow  */
-  	[4] = "#df5273", /* blue    */
-  	[5] = "#b072d1", /* magenta */
-  	[6] = "#24a8b4", /* cyan    */
-  	[7] = "#cbced0", /* white   */
-
-  	/* 8 bright colors */
-  	[8]  = "#6f6f70", /* black   */
-  	[9]  = "#e93c58", /* red     */
-  	[10] = "#efaf8e", /* green   */
-  	[11] = "#efb993", /* yellow  */
-  	[12] = "#df5273", /* blue    */
-  	[13] = "#b072d1", /* magenta */
-  	[14] = "#24a8b4", /* cyan    */
-  	[15] = "#e3e6ee", /* white   */
-
+      /* 8 normal colors */
+      [0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+      [1] = "#cc241d", /* red     */
+      [2] = "#98971a", /* green   */
+      [3] = "#d79921", /* yellow  */
+      [4] = "#458588", /* blue    */
+      [5] = "#b16286", /* magenta */
+      [6] = "#689d6a", /* cyan    */
+      [7] = "#a89984", /* white   */
+    
+      /* 8 bright colors */
+      [8]  = "#928374", /* black   */
+      [9]  = "#fb4934", /* red     */
+      [10] = "#b8bb26", /* green   */
+      [11] = "#fabd2f", /* yellow  */
+      [12] = "#83a598", /* blue    */
+      [13] = "#d3869b", /* magenta */
+      [14] = "#8ec07c", /* cyan    */
+      [15] = "#ebdbb2", /* white   */
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
@@ -130,7 +128,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 15;
-unsigned int defaultbg = 258;
+unsigned int defaultbg = 0;
 static unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 257;
 
@@ -474,4 +472,4 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-/* Horizon_Dark */
+/* Gruvbox_Dark */
